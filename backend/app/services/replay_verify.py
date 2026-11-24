@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""重放校验·用相同事件明细重放转化计算并比对差异条数，产出校验记录数据集。"""
 from __future__ import annotations
 
 from typing import Any

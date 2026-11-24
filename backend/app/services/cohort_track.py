@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""分群追踪·按观察周期计算留存率序列并校验追踪中断，产出追踪明细数据集。"""
 from __future__ import annotations
 
 from typing import Any

@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""延迟登记·登记事件批次到达延迟并校验是否触发补算，产出延迟记录数据集。"""
 from __future__ import annotations
 
 from typing import Any

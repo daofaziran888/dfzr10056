@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""路径下钻·对转化用户的行为路径做下钻聚合并计算路径占比，产出下钻条目数据集。"""
 from __future__ import annotations
 
 from typing import Any

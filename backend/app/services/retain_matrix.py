@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""留存矩阵·聚合分群观察期数据生成矩阵并标记版本，产出矩阵条目数据集。"""
 from __future__ import annotations
 
 from typing import Any

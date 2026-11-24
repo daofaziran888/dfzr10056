@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""窗口调整·校验漏斗转化窗口期变更并计算受影响的历史计算批次，产出调整记录数据集。"""
 from __future__ import annotations
 
 from typing import Any

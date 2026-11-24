@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""导出任务·将留存矩阵与步骤明细导出为文件并绑定已发布版本，产出任务单数据集。"""
 from __future__ import annotations
 
 from typing import Any

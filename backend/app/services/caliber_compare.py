@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""口径对比·对比口径版本切换前后的转化率并校验差值裁决，产出对比记录数据集。"""
 from __future__ import annotations
 
 from typing import Any

@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""转化计算·按日计算漏斗转化并对进入与转化人数做去重用户统计，产出计算批次数据集。"""
 from __future__ import annotations
 
 from typing import Any

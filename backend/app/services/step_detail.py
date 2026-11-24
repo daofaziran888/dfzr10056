@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""步骤明细·计算每步进入与流失并复核数据存疑条目，产出明细条目数据集。"""
 from __future__ import annotations
 
 from typing import Any

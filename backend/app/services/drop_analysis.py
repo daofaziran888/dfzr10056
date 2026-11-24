@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""流失分析·计算流失占比并定位流失集中的漏斗步骤，产出分析条目数据集。"""
 from __future__ import annotations
 
 from typing import Any

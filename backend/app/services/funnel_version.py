@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""漏斗版本·跟踪漏斗定义的版本演进并校验计算批次绑定的版本，产出版本条目数据集。"""
 from __future__ import annotations
 
 from typing import Any

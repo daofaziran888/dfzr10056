@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""分群切分·按维度切分用户并维护生效标记，产出分群条目数据集。"""
 from __future__ import annotations
 
 from typing import Any

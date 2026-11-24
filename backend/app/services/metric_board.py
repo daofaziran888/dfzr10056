@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""指标看板·按日聚合平台核心分析指标生成看板快照，产出看板快照数据集。"""
 from __future__ import annotations
 
 from typing import Any

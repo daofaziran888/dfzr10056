@@ -1,4 +1,4 @@
-"""__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
+"""流失预警·监控分群流失率相对阈值的偏离并校验预警级别，产出预警条目数据集。"""
 from __future__ import annotations
 
 from typing import Any
