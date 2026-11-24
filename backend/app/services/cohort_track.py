@@ -1,7 +1,10 @@
 """__NAME__领域服务：字段、状态和动作来自业务配置，数据处理骨架由基类复用。"""
 from __future__ import annotations
 
+from typing import Any
+
 from app.services.base import BaseModuleService
+from app.store import store
 
 
 class CohortTrackService(BaseModuleService):
@@ -13,3 +16,21 @@ class CohortTrackService(BaseModuleService):
     STATUS_ORDER = ["追踪中", "待复核", "已确认", "追踪中断"]
     ACTION_RULES = {"提交复核": "待复核", "确认追踪": "已确认", "登记中断": "追踪中断"}
     NEGATIVE_ACTIONS = []
+
+    def get_tracks_by_cohort(self, cohort_id: str) -> list[dict[str, Any]]:
+        rows = store.rows(self.MODULE)
+        return [r for r in rows if r.get("分群编号") == cohort_id]
+
+    def compute_retention_sequence(self, cohort_id: str) -> list[float]:
+        tracks = sorted(self.get_tracks_by_cohort(cohort_id),
+                        key=lambda t: int(t.get("观察周期", "D0")[1:]))
+        return [float(t.get("留存率", 0)) for t in tracks]
+
+    def average_retention(self, cohort_id: str) -> float:
+        seq = self.compute_retention_sequence(cohort_id)
+        return round(sum(seq) / len(seq), 1) if seq else 0.0
+
+    def latest_retention_rate(self, cohort_id: str) -> float:
+        tracks = sorted(self.get_tracks_by_cohort(cohort_id),
+                        key=lambda t: int(t.get("观察周期", "D0")[1:]), reverse=True)
+        return float(tracks[0].get("留存率", 0)) if tracks else 0.0
